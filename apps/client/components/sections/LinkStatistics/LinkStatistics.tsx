@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-// import { useParams } from 'next/navigation';
 
 import { useGetSingleLink } from '@client/api/hooks/useGetSingleLink';
 import { Section } from '@client/components/common/Section';
@@ -9,7 +8,6 @@ import { Typography } from '@client/components/common/Typography';
 import { LinkTicket } from './LinkTicket';
 
 export const LinkStatistics = ({ slug }: { slug: number }) => {
-  // const { slug } = useParams();
   const id = slug;
   const { link, isLoading, error } = useGetSingleLink(id);
 
