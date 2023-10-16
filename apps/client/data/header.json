@@ -1,0 +1,14 @@
+{
+  "menu": [
+    {
+      "id": "short",
+      "url": "/",
+      "name": "Short url"
+    },
+    {
+      "id": "urls",
+      "name": "My Urls",
+      "url": "/my-urls"
+    }
+  ]
+}

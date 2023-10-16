@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply duration-300 hover:opacity-80 focus:opacity-80;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.3) 24.62%, rgba(0, 0, 0, 0) 100%),
+      url('/images/hero.jpg'),
+      lightgray 0px 0px / 100% 120% no-repeat;
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+
+  .card-outline {
+    @apply relative pl-5 before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[1px] before:bg-[url('/images/doted-line.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''];
+  }
+
+  .card-base {
+    @apply bg-blue-50 p-5;
+  }
+
+  .nav-link-mob {
+    @apply relative;
+  }
+
+  .time-line__text {
+    @apply relative before:h-[1px] before:w-[44%] before:bg-[url('/images/black-dotted-left.svg')] before:bg-cover before:bg-no-repeat  before:content-['']  after:h-[1px]  after:w-[50%] after:bg-[url('/images/black-dotted-right.svg')] after:bg-cover after:bg-no-repeat after:content-[''] xl:before:w-[30%] xl:after:w-[60%];
+  }
+
+  .time-line__text::before,
+  .time-line__text::after {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .nav-link-mob:not(:last-child)::after {
+    background: repeating-linear-gradient(
+        0deg,
+        #0099b9,
+        #0099b9 10px,
+        transparent 10px,
+        transparent 20px,
+        #0099b9 20px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        #0099b9,
+        #0099b9 10px,
+        transparent 10px,
+        transparent 20px,
+        #0099b9 20px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        #0099b9,
+        #0099b9 10px,
+        transparent 10px,
+        transparent 20px,
+        #0099b9 20px
+      ),
+      repeating-linear-gradient(
+        270deg,
+        #0099b9,
+        #0099b9 10px,
+        transparent 10px,
+        transparent 20px,
+        #0099b9 20px
+      );
+    background-size:
+      3px 100%,
+      100% 3px,
+      3px 100%,
+      100% 3px;
+    background-position:
+      0 0,
+      0 0,
+      100% 0,
+      0 100%;
+    background-repeat: no-repeat;
+    @apply absolute -bottom-[18px] -left-9 block h-[1px] w-screen  content-[''];
+  }
+}
